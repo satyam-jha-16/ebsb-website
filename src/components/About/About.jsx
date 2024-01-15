@@ -16,13 +16,13 @@ import karan from "../../assets/karan.jpeg";
 export default function About() {
   return (
     <div className="py-16 bg-white ">
-      <div>
+      <div className="flex flex-col lg:flex-row">
         <div className="text-4xl text-center">Our Mentors</div>
-        <div className="flex justify-center">
+        <div className="flex justify-center flex-col lg:flex-row">
           <Fcard
             imagelink={dean}
             name={"Prof. Arvinder Kaur"}
-            post={"dean, USAR"}
+            post={"Dean, USAR"}
           />
           <Fcard
             imagelink={sumit}
@@ -37,9 +37,9 @@ export default function About() {
         </div>
       </div>
 
-      <div className="mt-5">
+      <div className="mt-5 flex flex-col lg:flex-row">
         <div className="text-4xl text-center">Meet Our Team</div>
-        <div className="flex justify-center">
+        <div className="flex justify-center flex-col lg:flex-row">
           <MCard
             imagelink={maaz}
             name={"Maaz Salik"}
@@ -71,7 +71,7 @@ export default function About() {
             linkedin={"https://www.linkedin.com/in/ritwick-johari-a37223256/"}
           />
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center flex-col lg:flex-row">
           <MCard
             imagelink={img1}
             name={"Jyotishko Chattopadhyay"}

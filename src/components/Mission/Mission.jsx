@@ -2,9 +2,9 @@ import React from "react";
 
 function Mission() {
   return (
-    <div style={{ display: "flex", justifyContent: "space-around" }}>
+    <div className="flex justify-around flex-col lg:flex-row" style={{ display: "flex", justifyContent: "space-around"}}>
       <div style={{ flex: 1 }}>
-        <div style={{ padding: "1rem", margin: "1rem", maxWidth: "800px" }}>
+        <div style={{maxWidth: "800px" }} className="p-1 m-1 lg:m-3 lg:p-3">
           <div className="rounded-lg shadow-lg overflow-hidden">
             <img
               src="https://i.ytimg.com/vi/84ITUmPZz1A/maxresdefault.jpg"
@@ -17,7 +17,7 @@ function Mission() {
       <div style={{ flex: 1, marginLeft: "1rem" }}>
         <div>
           <h1 className="text-3xl font-bold mt-6 ">Our Mission</h1>
-          <p className="text-2xl font-medium mt-6 mr-6">
+          <p className="text-xl mt-6 mr-6 lg:text-2xl font-medium">
             Ek Bharat Shreshtha Bharat programme aims to enhance interaction &
             promote mutual understanding between people of different states/UTs
             through the concept of state/UT pairing. The states carry out

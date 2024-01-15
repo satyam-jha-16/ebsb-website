@@ -3,7 +3,7 @@ import React from "react";
 const Card = ({ imagelink, text, size, outt, act }) => {
   return (
     // <div className='border shadow-lg p-5' >
-    <div className="rounded-lg shadow-2xl p-5 m-10 flex flex-col items-center justify-center">
+    <div className="rounded-lg shadow-2xl p-2 lg:p-5 m-5 flex flex-col items-center justify-center">
       <img
         src={imagelink}
         alt="card image"

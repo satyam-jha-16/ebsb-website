@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Membership() {
   return (
-    <div className="flex items-center">
+    <div className="flex items-center flex-col-reverse lg:flex-row">
       <div style={{ flex: 1 }}>
         <div style={{ padding: "1rem", margin: "1rem", maxWidth: "500px" }}>
           <div className="rounded-lg shadow-lg overflow-hidden">
@@ -56,7 +56,7 @@ export default function Membership() {
         </div>
       </div>
       <div style={{ flex: 1, marginLeft: "1rem" }}>
-        <div>
+        <div className="mb-10">
           <h1 className="text-3xl font-bold mt-6 ">
             Feeling Inspired to join us
           </h1>
@@ -71,7 +71,7 @@ export default function Membership() {
           <p className="text-2xl">
             To know more{" "}
             <a
-              className="text-blue-500"
+              className="text-blue-500 mb-10"
               href="https://docs.google.com/forms/d/e/1FAIpQLSdOkSoE6YiEOnOHwCby6ejXVIMp1WbUS5ztNJ9EF7O8Kd5jkA/viewform?usp=sf_link"
               target="_blank"
             >
