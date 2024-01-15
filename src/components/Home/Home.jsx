@@ -32,21 +32,23 @@ export default function Home() {
           </div>
         )}
       </div>
-      <aside className="relative overflow-hidden text-black rounded-lg sm:mx-16 mx-2 sm:py-16">
-        <div className="relative z-10 max-w-screen-xl px-4  pb-20 pt-10 sm:py-24 mx-auto sm:px-6 lg:px-8">
-          <div className="max-w-xl sm:mt-1 mt-80 space-y-8 text-center sm:text-right sm:ml-auto">
-            <h2>Ek Bharat Shreshtha Bharat</h2>
-          </div>
+
+      <div className="flex lg:flex-row-reverse justify-around my-14 mx-3 flex-col-reverse">
+        <div>
+          <h2 className="text-3xl font-bold">Ek Bharat Shreshtha Bharat - GGSIPU EDC</h2>
+          <p className="text-xl mt-3">
+            EK BHARAT SHRESTHA BHARAT is a club launched by the Government of India to increase unity between people of different India states or UT. This is the GGSIPU-EDC branch (of Ek Bharat Shreshtha Bharat), here we organize different cultural activities to meet the objectives of this club which can strengthen the cultural unity among diverse parts of India and spread multicultural knowledge among people living in various states and union territories.
+          </p>
         </div>
 
-        <div className="absolute inset-0 w-full sm:my-20 sm:pt-1 pt-12 h-full ">
+        <div className="shadow-xl">
           <img
-            className="w-96 h-max"
+            className="w-96 h-max rounded-xl"
             src="https://ek-bharat-shreshtha-bharat.narendramodi.in/files/mobile/1.jpg?190122144333"
             alt="image1"
           />
         </div>
-      </aside>
+      </div>
     </div>
   );
 }

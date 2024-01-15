@@ -4,7 +4,7 @@ export default function Membership() {
   return (
     <div className="flex items-center flex-col-reverse lg:flex-row">
       <div style={{ flex: 1 }}>
-        <div style={{ padding: "1rem", margin: "1rem", maxWidth: "500px" }}>
+        <div style={{ padding: "1rem", margin: "1rem", maxWidth: "480px" }}>
           <div className="rounded-lg shadow-lg overflow-hidden">
             <div className="bg-gray-200 p-4 rounded-lg shadow-lg">
               <div className="text-3xl font-bold p-5">Contact Us</div>
