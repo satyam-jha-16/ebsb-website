@@ -16,7 +16,7 @@ import karan from "../../assets/karan.jpeg";
 export default function About() {
   return (
     <div className="py-16 bg-white ">
-      <div className="flex flex-col lg:flex-row">
+      <div className="">
         <div className="text-4xl text-center">Our Mentors</div>
         <div className="flex justify-center flex-col lg:flex-row">
           <Fcard
@@ -37,7 +37,7 @@ export default function About() {
         </div>
       </div>
 
-      <div className="mt-5 flex flex-col lg:flex-row">
+      <div className="mt-5 ">
         <div className="text-4xl text-center">Meet Our Team</div>
         <div className="flex justify-center flex-col lg:flex-row">
           <MCard
