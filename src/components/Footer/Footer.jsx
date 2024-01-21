@@ -234,7 +234,7 @@ export default function Footer() {
                 </svg>
                 <span className="sr-only">Twitter page</span>
               </a>
-              <a to="#" className="text-gray-500  hover:text-gray-900">
+              <a href="https://github.com/satyam-jha-16/ebsb-website/" className="text-gray-500  hover:text-gray-900">
                 <svg
                   className="w-8 h-8"
                   aria-hidden="true"
