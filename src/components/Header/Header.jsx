@@ -1,12 +1,32 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Header = () => {
+  const [lastScrollY, setLastScrollY] = useState(0);
   const [navbar, setNavbar] = useState(false);
+
   const closeNavbar = () => {
     setNavbar(false);
   }
+
+
+  const controlNavbar = () => {
+    if (window.scrollY > lastScrollY) { 
+      setNavbar(false);
+    } 
+
+    
+    setLastScrollY(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', controlNavbar);
+
+    return () => {
+      window.removeEventListener('scroll', controlNavbar);
+    };
+  }, [lastScrollY]);
   return (
     <header className="shadow-lg sticky z-50 top-0">
       <nav className="bg-white border-gray-200 px-1 lg:px-6 py-2.5">
@@ -34,18 +54,18 @@ const Header = () => {
                 Ek Bharat <br /> Shreshtha Bharat <br /> GGSIPU - EDC
               </h1>
               <div>
-                
+
               </div>
             </Link>
-            <svg xmlns="http://www.w3.org/2000/svg" 
-                  className ='flex lg:hidden w-7 h-8 ml-10 mt-8'
-                  onClick={() => {setNavbar(!navbar)} }
-                  viewBox="0 0 448 512">
-                  <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
-                </svg>
+            <svg xmlns="http://www.w3.org/2000/svg"
+              className='flex lg:hidden w-7 h-8 ml-10 mt-8'
+              onClick={() => { setNavbar(!navbar) }}
+              viewBox="0 0 448 512">
+              <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+            </svg>
           </div>
           <div
-            className={`${navbar?"" : "hidden"} justify-between items-center w-full lg:flex lg:w-auto lg:order-1`}
+            className={`${navbar ? "" : "hidden"} justify-between items-center w-full lg:flex lg:w-auto lg:order-1`}
             id="mobile-menu-2"
           >
             <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
@@ -54,8 +74,7 @@ const Header = () => {
                   to={"/"}
                   onClick={closeNavbar}
                   className={({ isActive }) =>
-                    `block py-2 pr-4 pl-3 duration-200 text-xl ${
-                      isActive ? "text-orange-700" : "text-gray-700"
+                    `block py-2 pr-4 pl-3 duration-200 text-xl ${isActive ? "text-orange-700" : "text-gray-700"
                     } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
                   }
                 >
@@ -67,8 +86,7 @@ const Header = () => {
                   to={"/mission"}
                   onClick={closeNavbar}
                   className={({ isActive }) =>
-                    `block py-2 pr-4 pl-3 duration-200 text-xl ${
-                      isActive ? "text-orange-700 " : "text-gray-700"
+                    `block py-2 pr-4 pl-3 duration-200 text-xl ${isActive ? "text-orange-700 " : "text-gray-700"
                     } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
                   }
                 >
@@ -80,8 +98,7 @@ const Header = () => {
                   to={"activities"}
                   onClick={closeNavbar}
                   className={({ isActive }) =>
-                    `block py-2 pr-4 pl-3 duration-200 text-xl ${
-                      isActive ? "text-orange-700" : "text-gray-700"
+                    `block py-2 pr-4 pl-3 duration-200 text-xl ${isActive ? "text-orange-700" : "text-gray-700"
                     } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
                   }
                 >
@@ -93,8 +110,7 @@ const Header = () => {
                   to={"/media"}
                   onClick={closeNavbar}
                   className={({ isActive }) =>
-                    `block py-2 pr-4 pl-3 duration-200 text-xl ${
-                      isActive ? "text-orange-700" : "text-gray-700"
+                    `block py-2 pr-4 pl-3 duration-200 text-xl ${isActive ? "text-orange-700" : "text-gray-700"
                     } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
                   }
                 >
@@ -106,8 +122,7 @@ const Header = () => {
                   to={"/about"}
                   onClick={closeNavbar}
                   className={({ isActive }) =>
-                    `block py-2 pr-4 pl-3 duration-200 text-xl ${
-                      isActive ? "text-orange-700" : "text-gray-700"
+                    `block py-2 pr-4 pl-3 duration-200 text-xl ${isActive ? "text-orange-700" : "text-gray-700"
                     } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
                   }
                 >
@@ -119,8 +134,7 @@ const Header = () => {
                   to={"/membership"}
                   onClick={closeNavbar}
                   className={({ isActive }) =>
-                    `block py-2 pr-4 pl-3 duration-200 text-xl ${
-                      isActive ? "text-orange-700" : "text-gray-700"
+                    `block py-2 pr-4 pl-3 duration-200 text-xl ${isActive ? "text-orange-700" : "text-gray-700"
                     } border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
                   }
                 >
