@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 export default function Footer() {
   return (
-    <div>
+    <div >
       <footer className="bg-white border-y flex justify-end">
         <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div className="md:flex md:justify-between">
