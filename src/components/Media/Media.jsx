@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 // Import each image individually
 import media1 from '../../assets/media/media1.jpg';
@@ -11,53 +12,62 @@ import media6 from '../../assets/media/media6.jpg';
 function MediaSection() {
   const images = [media1, media2, media3, media4, media5, media6];
 
+  const imageContainerVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+  };
+
+  const sectionBorderVariants = {
+    hidden: { borderColor: 'transparent' },
+    visible: { borderColor: 'black', transition: { duration: 0.5 } },
+  };
+
+  const sectionVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 0.8, delay: 0.2 } },
+  };
+
+  const summarizedTextVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, delay: 0.4 } },
+  };
+
   return (
-    <div className="border-black border rounded-md shadow-lg p-6">
-      <h1 className="text-4xl font-bold mb-6 text-center">Our Members Attend the Republic Day Parade!</h1>
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={sectionBorderVariants}
+      className="border rounded-md p-5 border-black"
+    >
+      <motion.h2
+        variants={sectionVariants}
+        className="text-3xl font-bold mb-4 text-center"
+      >
+        Republic Day Parade Experience
+      </motion.h2>
+      <motion.div
+        variants={sectionVariants}
+        className="grid grid-cols-2 md:grid-cols-3 gap-4"
+      >
         {images.map((image, index) => (
-          <img
+          <motion.img
             key={index + 1}
             src={image}
             alt={`Media ${index + 1}`}
-            className="w-full h-50 object-cover rounded-md border-black border-2 mb-2"
+            variants={imageContainerVariants}
+            className="w-full h-50 object-cover rounded-md mb-2"
           />
         ))}
-      </div>
-      <div className="text-gray-800 mt-6">
-        <p className="text-2xl mb-4 leading-7 " >
-          We are delighted to share a moment
-          of immense pride and honor as the esteemed members of the EBSB EDC had the privilege of attending the Republic Day Parade. This prestigious event,
-          held annually in celebration of India's vibrant democracy and rich cultural heritage,
-          provided our team with a unique and inspiring experience.
-        </p>
-        
-        <p className="mb-4 leading-7 text-2xl">
-          Our team found themselves amidst the awe-inspiring atmosphere of Rajpath, where the
-          country's top leaders, distinguished guests, and citizens gathered to commemorate the
-          historic day. The parade, featuring the impressive march-past, vibrant cultural
-          performances, and awe-inspiring flypasts, left an indelible mark on our team members,
-          fostering a sense of patriotism and national pride.
-        </p>
-        <p className="mb-4 leading-7 text-2xl">
-          This unique experience has not only deepened our understanding of the significance of
-          Republic Day but has also served as a source of inspiration for the EBSB EDC team.
-          Witnessing the dedication of the armed forces, the display of indigenous military
-          capabilities, and the vibrant cultural presentations has reinforced our commitment to
-          contributing to the nation's development and fostering entrepreneurial spirit.
-        </p>
-        <p className="mt-4 leading-7 text-2xl">
-          Attending the Republic Day Parade
-          was a momentous occasion for the EBSB EDC team, filled with pride, inspiration, and a
-          renewed sense of commitment to the nation. As we continue our journey in promoting
-          entrepreneurship and innovation, we carry with us the spirit of Republic Day – a celebration
-          of unity in diversity and a reminder of the values that define our great nation. We extend
-          our heartfelt gratitude to all those who made this remarkable experience possible, and we
-          look forward to contributing meaningfully to the progress and prosperity of our beloved
-          country.
-        </p>
-      </div>
-    </div>
+      </motion.div>
+      <motion.div
+        variants={sectionVariants}
+        className="text-gray-800 mt-6"
+      >
+        <motion.p className="text-2xl leading-7" variants={summarizedTextVariants}>
+          The EBSB EDC team had an incredible experience attending the Republic Day Parade on 26th January. Amidst the awe-inspiring atmosphere of Rajpath, our team witnessed the impressive march-past, vibrant cultural performances, and flypasts, fostering a deep sense of patriotism and national pride. This unique experience has inspired our commitment to contributing to the nation's development and fostering entrepreneurial spirit.
+        </motion.p>
+      </motion.div>
+    </motion.div>
   );
 }
 
