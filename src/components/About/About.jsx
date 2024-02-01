@@ -13,10 +13,15 @@ import naruto from "../../assets/naruto.png";
 import skj from "../../assets/skj.jpeg";
 import ved from "../../assets/ved.jpeg";
 import karan from "../../assets/karan.jpeg";
+import lakshay from "../../assets/lakshay.png";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeInOut" } },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeInOut" },
+  },
 };
 
 const stagger = {
@@ -149,6 +154,13 @@ export default function About() {
               name={"Karan Bhatia"}
               post={"Social media lead"}
               linkedin={"https://www.linkedin.com/in/karanbhatia3420/"}
+            />
+          </motion.div>
+          <motion.div variants={fadeInUp}>
+            <MCard
+              imagelink={lakshay}
+              name={"Lakshay Sharma"}
+              post={"Treasurer"}
             />
           </motion.div>
         </motion.div>
