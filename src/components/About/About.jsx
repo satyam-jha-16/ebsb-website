@@ -111,7 +111,7 @@ export default function About() {
           <motion.div variants={fadeInUp}>
             <MCard
               imagelink={ls}
-              name={"Lakshay Sharma"}
+              name={"Lakshay Pandey"}
               post={"Joint Secretary"}
               linkedin={"https://www.linkedin.com/in/lakshya-pandey-a3b703288/"}
             />
