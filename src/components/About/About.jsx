@@ -86,7 +86,7 @@ export default function About() {
 
           <motion.div variants={fadeInUp}>
             <MCard
-              imagelink={psb}
+              imagelink={asp}
               name={"PUNIT SINGH BISHT"}
               post={"Vice President"}
               linkedin={
