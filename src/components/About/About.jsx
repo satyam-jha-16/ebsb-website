@@ -14,6 +14,9 @@ import skj from "../../assets/skj.jpeg";
 import ved from "../../assets/ved.jpeg";
 import karan from "../../assets/karan.jpeg";
 import lakshay from "../../assets/lakshay.png";
+import psb from "../../assets/psb.png";
+import ls from "../../assets/ls.jpeg";
+import pp from "../../assets/pp.jpeg";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -86,7 +89,7 @@ export default function About() {
 
           <motion.div variants={fadeInUp}>
             <MCard
-              imagelink={asp}
+              imagelink={psb}
               name={"PUNIT SINGH BISHT"}
               post={"Vice President"}
               linkedin={
@@ -99,7 +102,7 @@ export default function About() {
             <MCard
               imagelink={img1}
               name={"Jyotishko Chattopadhyay"}
-              post={"Joint Secretary"}
+              post={"General Secretary"}
               linkedin={
                 "https://www.linkedin.com/in/jyotishka-chattopadhyay-9815b4258/"
               }
@@ -107,12 +110,18 @@ export default function About() {
           </motion.div>
           <motion.div variants={fadeInUp}>
             <MCard
-              imagelink={naruto}
-              name={"Ritwick Johari"}
-              post={"Secretary"}
-              linkedin={"https://www.linkedin.com/in/ritwick-johari-a37223256/"}
+              imagelink={pp}
+              name={"Pratyush Prajapati"}
+              post={"Joint Secretary"}
+              //linkedin={"https://www.linkedin.com/in/ritwick-johari-a37223256/"}
             />
           </motion.div>
+          <motion.div variants={fadeInUp}>
+            <MCard
+              imagelink={ls}
+              name={"Lakshay Sharma"}
+              post={"Treasurer"}
+            />
         </motion.div>
         <motion.div
           variants={stagger}
@@ -156,12 +165,7 @@ export default function About() {
               linkedin={"https://www.linkedin.com/in/karanbhatia3420/"}
             />
           </motion.div>
-          <motion.div variants={fadeInUp}>
-            <MCard
-              imagelink={lakshay}
-              name={"Lakshay Sharma"}
-              post={"Treasurer"}
-            />
+          
           </motion.div>
         </motion.div>
       </div>
