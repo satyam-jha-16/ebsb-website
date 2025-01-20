@@ -132,6 +132,15 @@ export default function About() {
         >
           <motion.div variants={fadeInUp}>
             <MCard
+              imagelink={psb}
+              name={"PUNIT SINGH BISHT"}
+              post={"Tech Lead"}
+              linkedin={
+                "https://www.linkedin.com/in/psbvision/"
+              }
+            />
+          <motion.div variants={fadeInUp}>
+            <MCard
               imagelink={img1}
               name={"Jyotishko Chattopadhyay"}
               post={"Content Lead"}
