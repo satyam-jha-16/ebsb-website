@@ -121,6 +121,7 @@ export default function About() {
               imagelink={pp}
               name={"Pratyush Prajapati"}
               post={"Treasurer"}
+              linkedin={"https://www.linkedin.com/in/prattush-kumar-tripathi-877681279/"}
             />
         </motion.div>
           </motion.div>
