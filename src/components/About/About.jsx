@@ -111,15 +111,15 @@ export default function About() {
           <motion.div variants={fadeInUp}>
             <MCard
               imagelink={pp}
-              name={"Pratyush Prajapati"}
+              name={"Lakshay Sharma"}
               post={"Joint Secretary"}
-              //linkedin={"https://www.linkedin.com/in/ritwick-johari-a37223256/"}
+              linkedin={"https://www.linkedin.com/in/lakshya-pandey-a3b703288/"}
             />
           </motion.div>
           <motion.div variants={fadeInUp}>
             <MCard
               imagelink={ls}
-              name={"Lakshay Sharma"}
+              name={"Pratyush Prajapati"}
               post={"Treasurer"}
             />
         </motion.div>
@@ -139,6 +139,7 @@ export default function About() {
                 "https://www.linkedin.com/in/psbvision/"
               }
             />
+          </motion.div>
           <motion.div variants={fadeInUp}>
             <MCard
               imagelink={img1}
