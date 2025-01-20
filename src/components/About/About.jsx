@@ -77,31 +77,31 @@ export default function About() {
         >
           <motion.div variants={fadeInUp}>
             <MCard
-              imagelink={maaz}
-              name={"Maaz Salik"}
+              imagelink={tak}
+              name={"Tauseef Ahmad Khan"}
               post={"President"}
-              linkedin={"https://www.linkedin.com/in/maaz-salik-a30899256/"}
+              linkedin={"https://www.linkedin.com/in/tauseef-ahmad-khan-a94039236/"}
             />
           </motion.div>
 
           <motion.div variants={fadeInUp}>
             <MCard
-              imagelink={aps}
-              name={"Aaditya Pratap Sharma"}
+              imagelink={psb}
+              name={"PUNIT SINGH BISHT"}
               post={"Vice President"}
               linkedin={
-                "https://www.linkedin.com/in/aaditya-pratap-sharma-1a4877246/"
+                "https://www.linkedin.com/in/psbvision/"
               }
             />
           </motion.div>
 
           <motion.div variants={fadeInUp}>
             <MCard
-              imagelink={tak}
-              name={"Tauseef Ahmad Khan"}
+              imagelink={img1}
+              name={"Jyotishko Chattopadhyay"}
               post={"Joint Secretary"}
               linkedin={
-                "https://www.linkedin.com/in/tauseef-ahmad-khan-a94039236/"
+                "https://www.linkedin.com/in/jyotishka-chattopadhyay-9815b4258/"
               }
             />
           </motion.div>
