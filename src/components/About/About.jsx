@@ -123,6 +123,7 @@ export default function About() {
               post={"Treasurer"}
             />
         </motion.div>
+          </motion.div>
         <motion.div
           variants={stagger}
           initial="hidden"
@@ -166,7 +167,7 @@ export default function About() {
             />
           </motion.div>
           
-          </motion.div>
+          
         </motion.div>
       </div>
     </div>
