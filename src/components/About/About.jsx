@@ -110,7 +110,7 @@ export default function About() {
           </motion.div>
           <motion.div variants={fadeInUp}>
             <MCard
-              imagelink={pp}
+              imagelink={ls}
               name={"Lakshay Sharma"}
               post={"Joint Secretary"}
               linkedin={"https://www.linkedin.com/in/lakshya-pandey-a3b703288/"}
@@ -118,7 +118,7 @@ export default function About() {
           </motion.div>
           <motion.div variants={fadeInUp}>
             <MCard
-              imagelink={ls}
+              imagelink={pp}
               name={"Pratyush Prajapati"}
               post={"Treasurer"}
             />
