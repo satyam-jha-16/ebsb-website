@@ -186,10 +186,11 @@ export default function Footer() {
         <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div className="sm:flex sm:items-center sm:justify-between">
             <h1 className=" text-gray-500 sm:text-center text-xl">
-              Designed and maintained by{" "}
-              <a href="https://github.com/satyam-jha-16" target="_blank">
+              Designed by{" "}
+              <a href="https://github.com/satyam-jha-16" target="_blank" rel="noreferrer">
                 Satyam Jha
               </a>
+              and Maintained by <a href="https://github.com/psbvision" target="_blank" rel="noreferrer">Punit Singh Bisht</a>
             </h1>
             <div className="flex mt-4 space-x-5 sm:justify-center sm:mt-0">
               <a to="#" className="text-gray-500 hover:text-gray-900">
