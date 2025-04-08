@@ -188,7 +188,7 @@ export default function Footer() {
             <h1 className=" text-gray-500 sm:text-center text-xl">
               Designed by{" "}
               <a href="https://github.com/satyam-jha-16" target="_blank" rel="noreferrer">
-                Satyam Jha
+                Satyam Jha{" "}
               </a>
               and Maintained by <a href="https://github.com/psbvision" target="_blank" rel="noreferrer">Punit Singh Bisht</a>
             </h1>
